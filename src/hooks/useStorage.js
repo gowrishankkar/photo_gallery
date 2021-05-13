@@ -16,7 +16,7 @@ const useStorage = (file) => {
         setProgress(percentage);
       },
       (err) => {
-        serError(err);
+        setError(err);
       },
       async () => {
         const url = await storageRef.getDownloadURL();
